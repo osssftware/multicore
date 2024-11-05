@@ -1,168 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact Section</title>
-<style>
-  /* Body and Global Styling */
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #121212;
-    color: white;
-  }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Section with CAPTCHA</title>
+    <style>
+    
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: white;
+        }
 
-  /* Contact Section Styling */
-  .contact-section {
-    text-align: center;
-    padding: 50px 0;
-    background-color: #121212;
-  }
+        .contact-section {
+            text-align: center;
+            padding: 50px 0;
+            background-color: #121212;
+        }
 
-  .contact-section h2 {
-    font-size: 24px;
-    color: #ffffff;
-    margin-bottom: 10px;
-  }
+        .contact-section h2 {
+            font-size: 24px;
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
 
-  .contact-section h2::after {
-    content: "";
-    display: block;
-    width: 60px;
-    height: 2px;
-    background-color: #A78BFA;
-    margin: 8px auto;
-  }
+        .contact-section h2::after {
+            content: "";
+            display: block;
+            width: 60px;
+            height: 2px;
+            background-color: #A78BFA;
+            margin: 8px auto;
+        }
 
-  /* Social Media Icons Styling */
-  .social-icons {
-    margin: 20px 0;
-  }
+        .description {
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: #c1c1c1;
+        }
 
-  .social-icons a {
-    margin: 0 10px;
-    display: inline-block;
-    color: #ffffff;
-    font-size: 24px;
-    text-decoration: none;
-    transition: color 0.3s;
-  }
+        .social-icons {
+            margin: 20px 0;
+        }
 
-  .social-icons a:hover {
-    color: #A78BFA;
-  }
+        .social-icons a {
+            margin: 0 10px;
+            display: inline-block;
+            color: #ffffff;
+            font-size: 24px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
 
-  /* Contact Form Styling */
-  .contact-form {
-    max-width: 500px;
-    margin: 0 auto;
-  }
+        .social-icons a:hover {
+            color: #A78BFA;
+        }
 
-  .contact-form input, .contact-form textarea {
-    width: 48%;
-    padding: 10px;
-    margin: 8px 1%;
-    background-color: #3b3b3b;
-    color: #ffffff;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-  }
+        .contact-form {
+            max-width: 640px;
+            margin: 0 auto;
+            background-color: #3b3b3b;
+            padding: 20px;
+            border-radius: 5px;
+        }
 
-  .contact-form input::placeholder, .contact-form textarea::placeholder {
-    color: #c1c1c1;
-  }
+        .form-group {
+            margin-bottom: 15px;
+        }
 
-  .contact-form textarea {
-    width: 98%;
-    height: 100px;
-    resize: none;
-  }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
 
-  .contact-form button {
-    background-color: #ffffff;
-    color: #000;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 20px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
+        input, textarea, button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
 
-  .contact-form button:hover {
-    background-color: #c1c1c1;
-  }
+        .captcha {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-  .error-message {
-    color: #ff4d4d;
-    font-size: 14px;
-    margin-top: 5px;
-  }
-</style>
+        .captcha span {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .captcha-input {
+            width: 70%;
+        }
+
+        .captcha-message {
+            color: red;
+            display: none;
+        }
+    </style>
 </head>
 <body>
 
-<!-- Contact Section at the End of the Page -->
 <div class="contact-section">
-  <h2>Get in touch</h2>
+    <h2>Get in touch</h2>
+    <p class="description">We would love to hear from you! Please fill out the form below and we'll get back to you as soon as possible.</p>
 
-  <!-- Social Media Icons with Links -->
-  <div class="social-icons">
-    <a href="https://www.facebook.com/profile.php?id=61567852893743&mibextid=ZbWKwL" target="_blank" aria-label="Facebook">
-      <svg width="24" height="24" fill="white" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12 2.04c-5.49 0-9.96 4.47-9.96 9.96 0 5.1 3.81 9.32 8.76 9.92v-7.02h-2.63v-2.91h2.63v-2.22c0-2.6 1.58-4.02 3.9-4.02 1.11 0 2.06.08 2.34.12v2.71h-1.6c-1.26 0-1.5.6-1.5 1.47v1.94h3.03l-.39 2.91h-2.64v7.03c4.95-.6 8.76-4.83 8.76-9.93 0-5.49-4.47-9.96-9.96-9.96z"/>
-      </svg>
-    </a>
-    <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn">
-      <svg width="24" height="24" fill="white" xmlns="http://www.w3.org/2000/svg">
-        <path d="M4.98 3.5C4.98 2.12 6.1 1 7.48 1c1.38 0 2.5 1.12 2.5 2.5 0 1.38-1.12 2.5-2.5 2.5C6.1 6 4.98 4.88 4.98 3.5zM2 8.95h5v13H2v-13zm7.8 0H15v1.74c.8-1.17 2.18-2.3 4.5-2.3 4.81 0 5.7 3.15 5.7 7.23v6.33h-5v-5.62c0-1.33-.03-3.05-1.85-3.05-1.85 0-2.13 1.45-2.13 2.95v5.72H9.8v-13z"/>
-      </svg>
-    </a>
-    <a href="https://www.twitter.com" target="_blank" aria-label="Twitter">
-      <svg width="24" height="24" fill="white" xmlns="http://www.w3.org/2000/svg">
-        <path d="M22.46 6.03c-.77.34-1.6.57-2.47.67.89-.53 1.57-1.36 1.89-2.35-.83.5-1.75.87-2.72 1.06a4.3 4.3 0 0 0-7.32 3.91A12.2 12.2 0 0 1 3.22 4.93 4.3 4.3 0 0 0 4.4 11.5c-.74-.02-1.44-.22-2.06-.55v.06c0 2.11 1.5 3.87 3.5 4.27-.36.1-.74.15-1.13.15-.27 0-.54-.02-.8-.08.54 1.67 2.1 2.89 3.94 2.92a8.63 8.63 0 0 1-5.35 1.85c-.35 0-.69-.02-1.03-.06a12.16 12.16 0 0 0 6.57 1.92c7.89 0 12.21-6.54 12.21-12.22v-.56c.84-.6 1.57-1.34 2.14-2.18z"/>
-      </svg>
-    </a>
-    <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
-      <svg width="24" height="24" fill="white" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12 2.16c3.2 0 3.584.012 4.85.07 1.17.053 1.97.24 2.43.4.58.2 1 .45 1.44.89.44.44.68.86.89 1.44.16.46.35 1.26.4 2.43.06 1.26.07 1.65.07 4.85s-.01 3.584-.07 4.85c-.05 1.17-.24 1.97-.4 2.43a3.493 3.493 0 0 1-.89 1.44 3.493 3.493 0 0 1-1.44.89c-.46.16-1.26.35-2.43.4-1.26.06-1.65.07-4.85.07s-3.584-.01-4.85-.07c-1.17-.05-1.97-.24-2.43-.4a3.493 3.493 0 0 1-1.44-.89 3.493 3.493 0 0 1-.89-1.44c-.16-.46-.35-1.26-.4-2.43C2.17 15.584 2.16 15.2 2.16 12s.01-3.584.07-4.85c.05-1.17.24-1.97.4-2.43a3.493 3.493 0 0 1 .89-1.44A3.493 3.493 0 0 1 6.08 2.16c.46-.16 1.26-.35 2.43-.4C8.42 2.17 8.8 2.16 12 2.16zm0 2.64c-3.176 0-3.563.013-4.81.07-1.093.05-1.697.25-2.08.41a2.185 2.185 0 0 0-.84.53c-.216.216-.38.457-.53.84-.16.383-.36.987-.41 2.08-.057 1.247-.07 1.634-.07 4.81s.013 3.563.07 4.81c.05 1.093.25 1.697.41 2.08.15.383.314.624.53.84.216.216.457.38.84.53.383.16.987.36 2.08.41 1.247.057 1.634.07 4.81.07s3.563-.013 4.81-.07c1.093-.05 1.697-.25 2.08-.41a2.185 2.185 0 0 0 .84-.53c.216-.216.38-.457.53-.84.16-.383.36-.987.41-2.08.057-1.247.07-1.634.07-4.81s-.013-3.563-.07-4.81c-.05-1.093-.25-1.697-.41-2.08a2.185 2.185 0 0 0-.53-.84c-.216-.216-.457-.38-.84-.53-.383-.16-.987-.36-2.08-.41-1.247-.057-1.634-.07-4.81-.07zm0 3.94a5.91 5.91 0 1 1 0 11.82 5.91 5.91 0 0 1 0-11.82zm0 9.76a3.85 3.85 0 1 0 0-7.7 3.85 3.85 0 0 0 0 7.7zm6.41-10.86a1.44 1.44 0 1 0 0-2.88 1.44 1.44 0 0 0 0 2.88z"/>
-      </svg>
-    </a>
-  </div>
+    <div class="social-icons">
+        <a href="https://www.facebook.com/profile.php?id=61567852893743&mibextid=ZbWKwL" target="_blank" aria-label="Facebook">
+            <svg width="24" height="24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2.04c-5.49 0-9.96 4.47-9.96 9.96 0 5.1 3.81 9.32 8.76 9.92v-7.02h-2.63v-2.91h2.63v-2.22c0-2.6 1.58-4.02 3.9-4.02 1.11 0 2.06.08 2.34.12v2.71h-1.6c-1.26 0-1.5.6-1.5 1.47v1.94h3.03l-.39 2.91h-2.64v7.03c4.95-.6 8.76-4.83 8.76-9.93 0-5.49-4.47-9.96-9.96-9.96z"/>
+            </svg>
+        </a>
+        <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn">
+            <svg width="24" height="24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4.98 3.5C4.98 2.12 6.1 1 7.48 1c1.38 0 2.5 1.12 2.5 2.5 0 1.38-1.12 2.5-2.5 2.5C6.1 6 4.98 4.88 4.98 3.5zM2 8.95h5v13H2v-13zm7.8 0H15v1.74c.8-1.17 2.18-2.3 4.5-2.3 4.81 0 5.7 3.15 5.7 7.23v6.33h-5v-5.62c0-1.33-.03-3.05-1.85-3.05-1.85 0-2.13 1.45-2.13 2.95v5.72H9.8v-13z"/>
+            </svg>
+        </a>
+        <a href="https://www.twitter.com" target="_blank" aria-label="Twitter">
+            <svg width="24" height="24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                <path d="M22.46 6.03c-.77.34-1.6.57-2.47.67.89-.53 1.57-1.36 1.89-2.35-.83.5-1.75.87-2.72 1.06a4.3 4.3 0 0 0-7.32 3.91A12.2 12.2 0 0 1 3.22 4.93 4.3 4.3 0 0 0 4.4 11.5c-.74-.02-1.44-.22-2.06-.55v.06c0 2.11 1.5 3.87 3.5 4.27-.36.1-.74.15-1.13.15-.27 0-.54-.02-.8-.08.54 1.67 2.1 2.89 3.94 2.92a8.63 8.63 0 0 1-5.35 1.85c-.35 0-.69-.02-1.03-.06a12.16 12.16 0 0 0 6.57 1.92c7.89 0 12.21-6.54 12.21-12.22v-.56c.84-.6 1.57-1.34 2.14-2.18z"/>
+            </svg>
+        </a>
+        <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+            <svg width="24" height="24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2.16c3.2 0 3.584.012 4.85.07 1.17.053 1.97.24 2.43.4.58.2 1 .45 1.44.89.44.44.68.86.89 1.44.16.46.35 1.26.4 2.43.06 1.26.07 1.65.07 4.85s-.01 3.584-.07 4.85c-.05 1.17-.24 1.97-.4 2.43a3.493 3.493 0 0 1-.89 1.44 3.493 3.493 0 0 1-1.44.89c-.46.16-1.26.35-2.43.4-1.26.06-1.65.07-4.85.07s-3.584-.01-4.85-.07c-1.17-.05-1.97-.24-2.43-.4a3.493 3.493 0 0 1-1.44-.89 3.493 3.493 0 0 1-.89-1.44c-.16-.46-.35-1.26-.4-2.43C2.17 15.584 2.16 15.2 2.16 12s.01-3.584.07-4.85c.05-1.17.24-1.97.4-2.43.2-.58.45-1 .89-1.44.44-.44.86-.68 1.44-.89.46-.16 1.26-.35 2.43-.4C8.416 2.172 8.8 2.16 12 2.16zm0-2.16C8.74 0 8.292.01 7.04.07 5.793.14 4.858.23 4.002.37 2.94.56 2.086.9 1.37 1.61.66 2.33.32 3.18.18 4.17.11 5.25.1 5.688.1 12s.01 6.75.07 7.83c.14 1.07.38 1.92.56 2.34.5.91 1.17 1.68 1.85 2.06.57.31 1.23.56 2.04.68.83.14 1.78.18 3.05.18s2.22-.04 3.05-.18c.81-.12 1.47-.37 2.04-.68.68-.38 1.35-1.15 1.85-2.06.18-.42.42-1.27.56-2.34.06-1.08.07-1.53.07-7.83s-.01-6.75-.07-7.83c-.14-1.07-.38-1.92-.56-2.34-.5-.91-1.17-1.68-1.85-2.06-.57-.31-1.23-.56-2.04-.68C14.22.01 13.26 0 12 0zm0 5.84a6.16 6.16 0 1 0 0 12.32A6.16 6.16 0 0 0 12 5.84zm0 10.32a4.16 4.16 0 1 1 0-8.32 4.16 4.16 0 0 1 0 8.32zm5.92-10.5a1.92 1.92 0 1 0 0 3.84 1.92 1.92 0 0 0 0-3.84z"/>
+            </svg>
+        </a>
+    </div>
 
-  <!-- Contact Form -->
-  <div class="contact-form">
-    <form id="contactForm" onsubmit="return validateAndRedirect();">
-      <input type="text" id="name" placeholder="Your Name" required>
-      <input type="email" id="email" placeholder="Your Email" required>
-      <input type="text" id="subject" placeholder="Subject">
-      <textarea id="message" placeholder="Your Message"></textarea>
-      <button type="submit">Send Message</button>
-      <p id="error-message" class="error-message"></p>
-    </form>
-  </div>
+    <div class="contact-form">
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea id="description" rows="4" placeholder="Enter your message or additional information here..."></textarea>
+            </div>
+            <div class="form-group captcha">
+                <span id="captchaValue"></span>
+                <input type="text" id="captchaInput" class="captcha-input" placeholder="Enter the number" required>
+            </div>
+            <div class="captcha-message" id="captchaMessage">Incorrect CAPTCHA. Please try again.</div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
 </div>
 
 <script>
-  function validateAndRedirect() {
-    const email = document.getElementById('email').value;
-    const errorMessage = document.getElementById('error-message');
-    
-    // Simple email validation
-    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-    
-    if (!emailPattern.test(email)) {
-      errorMessage.textContent = "Please enter a valid email address.";
-      return false;
-    } else {
-      errorMessage.textContent = ""; // Clear error message if email is valid
-      window.open("https://www.facebook.com/profile.php?id=61567852893743&mibextid=ZbWKwL", "_blank");
-      return false; // Prevent form submission
+    function generateCaptcha() {
+        const captchaValue = Math.floor(Math.random() * 10000); // Random number between 0 and 9999
+        document.getElementById('captchaValue').innerText = captchaValue;
+        return captchaValue;
     }
-  }
+
+    let currentCaptcha = generateCaptcha(); // Store the current CAPTCHA value
+
+    document.getElementById('contactForm').onsubmit = function(event) {
+        event.preventDefault(); // Prevent form submission
+
+        const inputCaptcha = document.getElementById('captchaInput').value;
+        const captchaMessage = document.getElementById('captchaMessage');
+
+        if (inputCaptcha == currentCaptcha) {
+            captchaMessage.style.display = 'none';
+            alert('Form submitted successfully!'); // Placeholder for successful submission
+            // Here, you can add your form submission logic, e.g., sending data to a server
+        } else {
+            captchaMessage.style.display = 'block';
+            document.getElementById('captchaInput').value = ''; // Clear the input field
+            currentCaptcha = generateCaptcha(); // Generate a new CAPTCHA
+        }
+    };
 </script>
 
 </body>
