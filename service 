@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Section with Swiping</title>
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Services Section */
+        .services-section {
+            background-color: #f4f4f4;
+            padding: 50px 20px;
+            display: flex;
+            overflow: hidden;
+            position: relative;
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .services-container {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            width: 100%;
+            max-width: 80vw;
+        }
+
+        .service-card {
+            flex: 0 0 100%;
+            max-width: 100%;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+
+        /* Glass effect panels */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 80%;
+        }
+
+        .service-card h3 {
+            font-size: 2em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .service-card p {
+            font-size: 1em;
+            color: #555;
+        }
+
+        .service-card button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .service-card button:hover {
+            background-color: #0056b3;
+            transform: translateY(-3px);
+        }
+
+        /* Swipe Controls */
+        .controls {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .controls button {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 1.5em;
+            padding: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .controls button:hover {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Services Section -->
+    <div class="services-section">
+        <div class="services-container" id="servicesContainer">
+            <!-- Graphics Design -->
+            <div class="service-card">
+                <div class="glass-panel">
+                    <h3>Graphics Design</h3>
+                    <p>Professional design services to elevate your brand visuals.</p>
+                    <button>Know More</button>
+                </div>
+            </div>
+
+            <!-- Digital Marketing -->
+            <div class="service-card">
+                <div class="glass-panel">
+                    <h3>Digital Marketing</h3>
+                    <p>Strategies to increase your online presence and engagement.</p>
+                    <button>Know More</button>
+                </div>
+            </div>
+
+            <!-- Cyber Security -->
+            <div class="service-card">
+                <div class="glass-panel">
+                    <h3>Cyber Security</h3>
+                    <p>Secure your digital assets with our top-notch cybersecurity services.</p>
+                    <button>Know More</button>
+                </div>
+            </div>
+
+            <!-- Website Development -->
+            <div class="service-card">
+                <div class="glass-panel">
+                    <h3>Website Development</h3>
+                    <p>Custom websites to represent your business online effectively.</p>
+                    <button>Know More</button>
+                </div>
+            </div>
+
+            <!-- Application Development -->
+            <div class="service-card">
+                <div class="glass-panel">
+                    <h3>Application Development</h3>
+                    <p>Robust applications tailored to your business needs.</p>
+                    <button>Know More</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Swipe Controls -->
+        <div class="controls">
+            <button onclick="prevCard()">❮</button>
+            <button onclick="nextCard()">❯</button>
+        </div>
+    </div>
+
+    <script>
+        const servicesContainer = document.getElementById('servicesContainer');
+        let currentIndex = 0;
+        const serviceCards = document.querySelectorAll('.service-card');
+
+        function showCard(index) {
+            servicesContainer.style.transform = `translateX(-${index * 100}%)`;
+        }
+
+        function nextCard() {
+            currentIndex = (currentIndex + 1) % serviceCards.length;
+            showCard(currentIndex);
+            resetAutoSwipe(); // Reset auto-swipe timer on manual control
+        }
+
+        function prevCard() {
+            currentIndex = (currentIndex - 1 + serviceCards.length) % serviceCards.length;
+            showCard(currentIndex);
+            resetAutoSwipe(); // Reset auto-swipe timer on manual control
+        }
+
+        // Auto-swipe functionality
+        let autoSwipeInterval = setInterval(nextCard, 3000);
+
+        function resetAutoSwipe() {
+            clearInterval(autoSwipeInterval);
+            autoSwipeInterval = setInterval(nextCard, 3000);
+        }
+    </script>
+
+</body>
+</html>
