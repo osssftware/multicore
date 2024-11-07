@@ -1,75 +1,130 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang=”en”>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset=”UTF-8”>
+    <meta name=”viewport” content=”width=device-width, initial-scale=1.0”>
     <title>Hero Section</title>
     <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            color: white;
-            overflow: hidden;
+        Body {
+            Margin: 0;
+            Font-family: Arial, sans-serif;
+            Color: white;
+            Overflow: hidden;
         }
+
         .hero {
-            position: relative;
-            height: 100vh;
-            background: url('https://i.ibb.co/com/84jy4Wh/pixlr-image-generator-562915b4-1e69-4826-b709-e47a367307e1-png.webp') no-repeat center center fixed;
-            background-size: cover;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
+            Position: relative;
+            Height: 100vh;
+            Display: flex;
+            Flex-direction: column;
+            Justify-content: center;
+            Align-items: center;
+            Text-align: center;
+            Background: linear-gradient(45deg, #ff0080, #00ffcc, #00aaff, #ffcc00);
+            Background-size: 400% 400%;
+            Animation: gradientAnimation 10s ease infinite; /* Animation for gradient */
         }
+
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .overlay {
+            Position: absolute;
+            Top: 0;
+            Left: 0;
+            Right: 0;
+            Bottom: 0;
+            Background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text contrast */
+        }
+
         .welcome-text {
-            font-size: 3em;
-            font-weight: bold;
-            animation: typewriter 4s steps(40) forwards;
-            white-space: nowrap;
-            overflow: hidden;
-            border-right: 4px solid white; /* Cursor effect */
+            Font-size: 3em;
+            Font-weight: bold;
+            Animation: typewriter 4s steps(40) forwards;
+            White-space: nowrap;
+            Overflow: hidden;
+            Border-right: 4px solid white; /* Cursor effect */
         }
+
         @keyframes typewriter {
-            from { width: 0; }
-            to { width: 100%; }
+            From { width: 0; }
+            To { width: 100%; }
         }
+
         .subtext {
-            font-size: 1.5em;
-            margin: 20px 0;
-            max-width: 600px;
+            Font-size: 1.5em;
+            Margin: 20px 0;
+            Max-width: 600px;
+            Opacity: 0;
+            Animation: fadeIn 1s forwards 4s; /* Fade in effect */
         }
+
+        @keyframes fadeIn {
+            From { opacity: 0; }
+            To { opacity: 1; }
+        }
+
         .cta-buttons {
-            margin-top: 30px;
+            Margin-top: 30px;
         }
+
         .cta-buttons button {
-            background-color: #007BFF;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            padding: 15px 30px;
-            font-size: 1em;
-            cursor: pointer;
-            margin: 0 10px;
-            transition: background-color 0.3s;
+            Background-color: #007BFF;
+            Color: white;
+            Border: none;
+            Border-radius: 5px;
+            Padding: 15px 30px;
+            Font-size: 1em;
+            Cursor: pointer;
+            Margin: 0 10px;
+            Transition: background-color 0.3s, transform 0.3s; /* Added transform */
         }
+
         .cta-buttons button:hover {
-            background-color: #0056b3;
+            Background-color: #0056b3;
+            Transform: translateY(-3px); /* Lift effect on hover */
+        }
+
+        .cta-buttons button:active {
+            Transform: translateY(1px); /* Pressed effect */
         }
     </style>
 </head>
 <body>
 
-    <div class="hero">
-        <div class="welcome-text">Welcome to [Your Agency Name]!</div>
-        <div class="subtext">
-            At [Your Agency Name], we are dedicated to bringing your ideas to life through our comprehensive range of services. Whether you're a startup looking to establish your online presence or an established business aiming to enhance your digital footprint, we have the expertise to help you succeed.
+    <div class=”hero”>
+        <div class=”overlay”></div>
+        <div class=”welcome-text”>Welcome to Multicore Tech Solutions Limited !</div>
+        <div class=”subtext”>
+            At Multicore Tech Solutions Limited, we are dedicated to bringing your ideas to life through our comprehensive range of services. Whether you’re a startup looking to establish your online presence or an established business aiming to enhance your digital footprint, we have the expertise to help you succeed.
         </div>
-        <div class="cta-buttons">
-            <button onclick="location.href='#services'">Explore Services</button>
-            <button onclick="location.href='#about'">Learn More About Us</button>
+        <div class=”cta-buttons”>
+            <button onclick=”scrollToSection(‘services’)”>Explore Services</button>
+            <button onclick=”scrollToSection(‘about’)”>Learn More About Us</button>
         </div>
     </div>
 
-</body>
+    <script>
+        Function scrollToSection(sectionId) {
+            Const section = document.getElementById(sectionId);
+            If (section) {
+                Section.scrollIntoView({ behavior: ‘smooth’ });
+            } else {
+                Alert(‘Section not found!’);
+            }
+        }
+    </script>
+
+    <!—Example sections for scrolling 
+    <div id=”services” style=”height: 100vh; background: #f4f4f4; display: flex; justify-content: center; align-items: center;”>
+        <h2>Our Services</h2>
+    </div>
+    <div id=”about” style=”height: 100vh; background: #e2e2e2; display: flex; justify-content: center; align-items: center;”>
+        <h2>About Us</h2>
+    </div>
+
+ </body>
 </html>
