@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero Section</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+            overflow: hidden;
+        }
+        .hero {
+            position: relative;
+            height: 100vh;
+            background: url('https://i.ibb.co/com/84jy4Wh/pixlr-image-generator-562915b4-1e69-4826-b709-e47a367307e1-png.webp') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .welcome-text {
+            font-size: 3em;
+            font-weight: bold;
+            animation: typewriter 4s steps(40) forwards;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 4px solid white; /* Cursor effect */
+        }
+        @keyframes typewriter {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        .subtext {
+            font-size: 1.5em;
+            margin: 20px 0;
+            max-width: 600px;
+        }
+        .cta-buttons {
+            margin-top: 30px;
+        }
+        .cta-buttons button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 15px 30px;
+            font-size: 1em;
+            cursor: pointer;
+            margin: 0 10px;
+            transition: background-color 0.3s;
+        }
+        .cta-buttons button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hero">
+        <div class="welcome-text">Welcome to [Your Agency Name]!</div>
+        <div class="subtext">
+            At [Your Agency Name], we are dedicated to bringing your ideas to life through our comprehensive range of services. Whether you're a startup looking to establish your online presence or an established business aiming to enhance your digital footprint, we have the expertise to help you succeed.
+        </div>
+        <div class="cta-buttons">
+            <button onclick="location.href='#services'">Explore Services</button>
+            <button onclick="location.href='#about'">Learn More About Us</button>
+        </div>
+    </div>
+
+</body>
+</html>
