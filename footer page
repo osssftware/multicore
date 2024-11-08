@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Footer Example</title>
+  <!-- Include Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* Footer styling */
+    .footer {
+      background-color: #f5f5f5;
+      padding: 50px 20px;
+      color: #333;
+      font-family: Arial, sans-serif;
+    }
+
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    /* Social Media Icons */
+    .footer-social {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .footer-social a {
+      margin: 0 10px;
+      color: #333;
+      font-size: 24px; /* Increase icon size */
+      text-decoration: none;
+    }
+
+    .footer-social a:hover {
+      color: #007bff;
+    }
+
+    /* Footer About, Tags, and Tweets */
+    .footer-section {
+      flex: 1;
+      margin: 20px;
+      min-width: 200px;
+    }
+
+    .footer-section h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .footer-about p {
+      line-height: 1.6;
+      color: #666;
+    }
+
+    .footer-tags span,
+    .footer-tweets p {
+      display: inline-block;
+      padding: 5px 10px;
+      background-color: #ddd;
+      border-radius: 5px;
+      margin: 5px;
+      color: #333;
+      font-size: 14px;
+    }
+
+    .footer-tags span:hover,
+    .footer-tweets p:hover {
+      background-color: #007bff;
+      color: #fff;
+    }
+
+    /* Footer Bottom */
+    .footer-bottom {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid #ddd;
+      color: #666;
+      font-size: 14px;
+    }
+
+    .footer-bottom a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    .footer-bottom a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="footer-container">
+
+      <!-- Social Media Icons -->
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="Google"><i class="fab fa-google"></i></a>
+        <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+
+      <!-- About Section -->
+      <div class="footer-section footer-about">
+        <h3>Zenith</h3>
+        <p>Zenith is an ultra responsive theme with hundreds of special tools and plugins like WooCommerce and Rev-Slider. It is a platform for your success with super support twenty-four hours.</p>
+      </div>
+
+      <!-- Tags Section -->
+      <div class="footer-section footer-tags">
+        <h3>Tags</h3>
+        <span>Blue</span>
+        <span>Bootstrap</span>
+        <span>Culture</span>
+        <span>Exploration</span>
+        <span>Fire</span>
+        <span>Forest</span>
+        <span>Food</span>
+        <span>Holiday</span>
+        <span>Inspiration</span>
+        <span>Travel</span>
+        <span>Nature</span>
+      </div>
+
+      <!-- Latest Tweets Section -->
+      <div class="footer-section footer-tweets">
+        <h3>Latest Tweets</h3>
+        <p>Build every gym or health website style without coding! #template #theme #WordPress #fitness</p>
+        <p>Sports and health WordPress template #webdesign #theme #plugins #WordPress #gym</p>
+      </div>
+    </div>
+
+    <!-- Footer Bottom Section -->
+    <div class="footer-bottom">
+      <p>&copy; 2023 Zenith WordPress theme by Visualmodo</p>
+      <p>Market Street, San Francisco, CA 94103</p>
+    </div>
+  </footer>
+
+</body>
+</html>
