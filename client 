@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f4f4;
+}
+
+h1 {
+  color: #333;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+.logo {
+  width: 150px;
+  margin: 10px;
+}
+
+.logo img {
+  width: 100%;
+}
+</style>
+</head>
+<body>
+
+<h1>PARTNERS</h1>
+<p style="text-align: center;">Meet our partners and clients</p>
+
+<div class="container">
+  <div class="logo">
+    <img src="https://i.imgur.com/y5j7X0M.png" alt="Vairis">
+  </div>
+  <div class="logo">
+    <img src="https://i.imgur.com/L9i6e6x.png" alt="High Peek Images">
+  </div>
+  <div class="logo">
+    <img src="https://i.imgur.com/k24Q7Yz.png" alt="Gamelove">
+  </div>
+  <div class="logo">
+    <img src="https://i.imgur.com/dM2J69O.png" alt="Jellyfish">
+  </div>
+  <div class="logo">
+    <img src="https://i.imgur.com/i1X85wX.png" alt="Gen 3">
+  </div>
+  <div class="logo">
+    <img src="https://i.imgur.com/3c6x41w.png" alt="Golf Star">
+  </div>
+  <div class="logo">
+    <img src="https://i.imgur.com/lM8Y4v6.png" alt="TP">
+  </div>
+  <div class="logo">
+ <img src="https://i.imgur.com/8Z1g1gD.png" alt="Guardian">
+  </div>
+  <div class="logo">
+    <img src="https://i.imgur.com/3Z1g1gD.png" alt="Sakwa">
+  </div>
+  <div class="logo">
+    <img src="https://i.imgur.com/4Z1g1gD.png" alt="Eighty Six Ideas">
+  </div>
+  <div class="logo">
+    <img src="https://i.imgur.com/5Z1g1gD.png" alt="The Funding Network">
+  </div>
+</div>
+
+</body>
+</html>
