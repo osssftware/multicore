@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Partners and About Us Section</title>
+  <style>
+    /* Slider Container */
+    .slider-container {
+      width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .slider {
+      display: inline-flex;
+      animation: slide 20s linear infinite;
+    }
+
+    .slider img {
+      margin: 0 60px;
+      height: 240px;
+    }
+
+    @keyframes slide {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+
+    /* About Us Section */
+    .about-us-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0; /* Removed margin to eliminate space */
+      text-align: center;
+      width: 60%;
+    }
+
+    .team-slider-container {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .team-slider {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+
+    .team-member {
+      flex: 0 0 100%;
+      text-align: center;
+    }
+
+    .team-member img {
+      border-radius: 50%;
+      width: 200px;
+      height: 200px;
+    }
+
+    .team-member h3 {
+      margin: 10px 0 5px;
+      font-size: 24px;
+    }
+
+    .team-member p {
+      margin: 0;
+      font-size: 18px;
+    }
+
+    .team-member .position {
+      color: gray;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Partners Slider Section -->
+  <div class="slider-container">
+    <div class="slider">
+      <img src="logo1.png" alt="Partner 1">
+      <img src="logo2.png" alt="Partner 2">
+      <img src="logo3.png" alt="Partner 3">
+      <img src="logo4.png" alt="Partner 4">
+      <img src="logo5.png" alt="Partner 5">
+      <!-- Duplicate logos for infinite loop effect -->
+      <img src="logo1.png" alt="Partner 1">
+      <img src="logo2.png" alt="Partner 2">
+      <img src="logo3.png" alt="Partner 3">
+      <img src="logo4.png" alt="Partner 4">
+      <img src="logo5.png" alt="Partner 5">
+    </div>
+  </div>
+
+  <!-- About Us Section -->
+  <div class="about-us-container">
+    <h2>About Us</h2>
+    <p>Meet our team of professionals who make everything possible.</p>
+    <div class="team-slider-container">
+      <div class="team-slider" id="teamSlider">
+        <!-- Team Member 1 -->
+        <div class="team-member">
+          <img src="team1.jpg" alt="Team Member 1">
+          <h3>John Doe</h3>
+          <div class="position">CEO</div>
+          <p>John leads our team with a vision for innovation and excellence.</p>
+        </div>
+        <!-- Team Member 2 -->
+        <div class="team-member">
+          <img src="team2.jpg" alt="Team Member 2">
+          <h3>Jane Smith</h3>
+          <div class="position">CTO</div>
+          <p>Jane oversees technology and ensures everything runs smoothly.</p>
+        </div>
+        <!-- Team Member 3 -->
+        <div class="team-member">
+          <img src="team3.jpg" alt="Team Member 3">
+          <h3>Alex Brown</h3>
+          <div class="position">Marketing Manager</div>
+          <p>Alex crafts strategies to connect us with our clients.</p>
+        </div>
+        <!-- Team Member 4 -->
+        <div class="team-member">
+          <img src="team4.jpg" alt="Team Member 4">
+          <h3>Emily Clark</h3>
+          <div class="position">Designer</div>
+          <p>Emily brings our ideas to life with her creative designs.</p>
+        </div>
+        <!-- Team Member 5 -->
+        <div class="team-member">
+          <img src="team5.jpg" alt="Team Member 5">
+          <h3>Michael Lee</h3>
+          <div class="position">Developer</div>
+          <p>Michael ensures our applications are top-notch and functional.</p>
+        </div>
+        <!-- Team Member 6 -->
+        <div class="team-member">
+          <img src="team6.jpg" alt="Team Member 6">
+          <h3>Sarah Wilson</h3>
+          <div class="position">Project Manager</div>
+          <p>Sarah coordinates the team’s efforts for successful project completion.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // JavaScript for automatic sliding with looping
+    const teamSlider = document.getElementById('teamSlider');
+    let index = 0;
+    const totalMembers = 6; // Total number of team members
+
+    function slideTeam() {
+      index++;
+      if (index >= totalMembers) {
+        // Reset to the first team member
+        index = 0;
+      }
+      teamSlider.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    // Auto-slide every 5 seconds
+    setInterval(slideTeam, 5000);
+  </script>
+</body>
+</html>
