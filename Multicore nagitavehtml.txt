@@ -17,7 +17,7 @@
                         <a href="#">Digital Marketing</a>
                         <a href="#">Graphics Design</a>
                         <a href="#">Application Development</a>
-                        <a href="#">SEO</a>
+                        <a href="#">Cyber Security </a>
                         <a href="#">Website Design</a>
                     </div>
                 </li>
